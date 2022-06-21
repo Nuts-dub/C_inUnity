@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Maze
 {
@@ -7,16 +9,26 @@ namespace Maze
     {
         private ListExecuteObject _interactiveObject;
         private InputController _inputController;
+        private Reference _reference;
 
         [SerializeField] private BadBonus badBonus;
         [SerializeField] private GoodBonus goodBonus;
 
         [SerializeField] private GameObject _player;
+        //[SerializeField] private Button _restartButton;
+        //[SerializeField] private Button _exitGameButton;
 
         void Awake()
         {
+            _reference = new Reference();
+
             _inputController = new InputController(_player.GetComponent<Unit>());
             _interactiveObject = new ListExecuteObject();
+
+
+            //_restartButton.onClick.AddListener(RestartGame);
+
+            //_restartButton.gameObject.SetActive(false);
 
             _interactiveObject.AddExecuteObject(_inputController);
 
@@ -33,6 +45,11 @@ namespace Maze
         {
             Debug.Log("points: " + i);
         }
+
+        //private void RestartGame()
+        //{
+        //    SceneManager.LoadScene(0);
+        //}    
 
         void Update()
         {
