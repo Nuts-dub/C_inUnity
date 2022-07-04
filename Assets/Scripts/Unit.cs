@@ -9,11 +9,13 @@ namespace Maze
         [SerializeField] public Rigidbody _rb;
         public Transform _transform;
 
-        public static float Speed = 5;
+        public static float Speed = 3;
         public static float speedRotate = 60f;
         public static int Health = 100;
         public static bool isDead;
 
         public abstract void Move(float x, float y, float z);
+
+        public abstract void SavePlayer();
     }
 }
