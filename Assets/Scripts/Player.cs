@@ -10,11 +10,13 @@ namespace Maze
         public int PlayerHealth;
         public bool PlayerDead;
         public SVect3 PlayerPosition;
+        public int PlayerBonus;
     }
 
     public sealed class Player : Unit, IRotation
     {
         PlayerData SinglePlayerData = new PlayerData();
+        Main main = new Main();
 
         private ISaveData _data;
 
@@ -33,10 +35,12 @@ namespace Maze
             SinglePlayerData.PlayerHealth = Health;
             SinglePlayerData.PlayerDead = isDead;
             SinglePlayerData.PlayerName = gameObject.name;
+            SinglePlayerData.PlayerBonus = main.bonusScore;
 
             _data = new JSONData();
             _data.SaveData(SinglePlayerData);
 
+            
         }
         public override void Move(float x, float y, float z)
         {
@@ -66,6 +70,7 @@ namespace Maze
             Debug.Log(NewPlayer.PlayerName);
             Debug.Log(NewPlayer.PlayerPosition);
             Debug.Log(NewPlayer.PlayerHealth);
+            Debug.Log(NewPlayer.PlayerBonus);
         }
     }
 }

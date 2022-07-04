@@ -10,6 +10,7 @@ namespace Maze
         private ListExecuteObject _interactiveObject;
         private InputController _inputController;
         private Reference _reference;
+        public int bonusScore;
 
         [SerializeField] private BadBonus badBonus;
         [SerializeField] private GoodBonus goodBonus;
@@ -44,6 +45,7 @@ namespace Maze
         public void bonusPoints(int i)
         {
             Debug.Log("points: " + i);
+            bonusScore = i;
         }
 
         //private void RestartGame()

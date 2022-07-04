@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7957868291589690692}
   - component: {fileID: 7445010406088789605}
   - component: {fileID: 3613147554064187387}
-  - component: {fileID: 5279427678594356651}
   - component: {fileID: 1628825116368221215}
   m_Layer: 0
   m_Name: GoodBonus
@@ -97,19 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5279427678594356651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2385852055194860714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d85d36f12e5cfb4fbf04808aab66ee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transform: {fileID: 0}
 --- !u!114 &1628825116368221215
 MonoBehaviour:
   m_ObjectHideFlags: 0
