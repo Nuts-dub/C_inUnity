@@ -47,7 +47,7 @@ namespace Maze
             if(_rb)
             {
                 _rb.AddForce(new Vector3(x, y, z) * Speed * Time.fixedDeltaTime);
-                transform.Translate(new Vector3(x, y, z) * Speed * Time.fixedDeltaTime);
+                transform.Translate(new Vector3(x, y, z) * Speed * Time.deltaTime);
                 Rotate();
             }
             else
@@ -59,7 +59,7 @@ namespace Maze
         }
         public void Rotate()
         {
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * speedRotate * Time.fixedDeltaTime, 0));
+            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * speedRotate * Time.deltaTime, 0));
         }
 
         public override void SavePlayer()
